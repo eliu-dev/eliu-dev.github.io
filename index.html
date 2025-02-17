@@ -25,13 +25,39 @@
     <main>
       <section id="projects">
         <h1>Current Projects</h1>
-        <h2>Bluesky Analytics</h2>
-        <h2>Solarium</h2>
-        <h2>Machine Learning Engineering</h2>
+        <h2>Bluesky Analytics 🦋 (<a href="https://github.com/eliu-dev/bsky-firehose">Github)</a></h2>
+        <p>Working on a data pipeline and analytics dashboard for the Bluesky social network. Bluesky allows access to all posts and actions on its site through its Firehose API. This project uses the Jetstream version of it (JSON results) for ease of processing and ingestion.</p>
+        <ul>
+          <li><b>Backend (Python)</b></li>
+          <ul>
+            <li>FastAPI server to connect to Jetstream API via websocket.</li>
+            <li>Kafka service as message broker to buffer results from Jetstream.</li>
+            <li>PostgreSQL database to structure and store data.</li>
+          </ul>
+          <li><b>Frontend (Typescript/React)</b></li>
+          <li><b>Orchestration:</b> Docker containers and docker compose for deployment.</li>
+        </ul>
+        <h2>Solarium 🌤️ (<a href="https://github.com/eliu-dev/solarium">Github)</a></h2>
+        <p>Simple Node.js/React app with Typescript to retrieve UV index forecast from <a href="https://www.openuv.io/">OpenUV API</a>.</p>
+        <ul>
+          <li>Leveraged geolocation API to retrieve forecast for user's location.</li>
+          <li>Used Material UI components for styling.</li>
+        </ul>
+        <h2>Projects @ Cornell Tech</h2>
+        <p>Minitorch: Created miniature version of Pytorch engine for training neural networks.</p>
+        <ul>
+          <li>Implemented scalar and tensor math operations for autodifferentiation. (<a href="https://github.com/eliu-dev/mod2-eliu-dev">Github</a>)</li>
+          <ul>
+            <li>Built forward pass and backward pass to update weights in neural network.</li>
+            <li>Implemented parallelized version of tensor operations using Numba.</li>
+          </ul>
+          <li>Trained neural networks for sentiment analysis  and digit detection (<a href="https://github.com/eliu-dev/mod4-eliu-dev">Github</a>).</li>
+        </ul>
         <p></p>
       </section>
       <section id="interests">
         <h1>Interests</h1>
+        
       </section>
     </main>
   </body>
