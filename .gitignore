@@ -1,8 +1,3 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
 .env
-
 .DS_Store
-Gemfile.lock
+local

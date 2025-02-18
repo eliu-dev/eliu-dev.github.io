@@ -1,0 +1,137 @@
+:root {
+  scroll-behavior: smooth;
+  scroll-padding: 5em;
+  color-scheme: light dark;
+  font-family: 'Noto Sans', 'Helvetica', 'Arial', 'San Serif';
+  --background-primary: #f6f6f6;
+  --text-primary: #082241
+  
+}
+
+:root[data-theme='dark'] {
+  --background-primary: #082241;
+  --text-primary: #f6f6f6;
+}
+
+@font-face {
+  font-family: Noto Sans;
+  src: 
+    local('NotoSans-NotoSans-VariableFont_wdth,wght'),
+    url('NotoSans-VariableFont_wdth,wght\.ttf');
+}
+
+@font-face {
+  font-family: Noto Serif;
+  src: 
+    local('NotoSerif-VariableFont_wdth\,wght'),
+    url('NotoSerif-VariableFont_wdth\,wght.ttf');
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav.flexbox {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #FFFFFF;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #082241
+}
+
+nav .left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+nav .center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+nav .right {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+nav .links {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.5vh;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+nav .selected-link {
+  color: #669AD5
+}
+
+nav .title {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  font-size: 4vh;
+}
+
+/* Hidden element to allow us to start the main body of text below the navbar */
+.navbar-spacer {
+  display: block;
+  margin-bottom: 7em;
+}
+
+a > .logo {
+  align-self: start;
+  background-color: #FFFFFF;
+  height: 32px;
+  padding: 5px;
+}
+
+.grid-articles {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto;
+}
+
+main {
+  position: relative;
+  top: max-content;
+}
+
+h1 {
+  font-size: calc(17px + 0.390625vw);
+}
+
+section h1 {
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: calc(13px + 0.390625vw);
+}
+
+div .img-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.img-grid img {
+  border-radius: 15px;
+  height: 300px;
+  width: 300px
+}
