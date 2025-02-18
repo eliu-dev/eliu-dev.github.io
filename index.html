@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src='navbar.js' defer></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5CKW76WEZ"></script>
     <script>
@@ -20,8 +19,25 @@
     <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <nav-bar></nav-bar>
-    <div class="navbar-spacer"></div>
+  <nav class="flexbox">
+    <div class="left"></div>
+    <div class="center">
+        <a href="/index.html" class="title links">Eric Liu</a>
+    </div>
+    <div class="right">
+        <a href="/index.html#projects" class="links">Projects</a>
+        <a href="/index.html#snippets" class="links">Snippets</a>
+        <a href="https://www.linkedin.com/in/eric-liu/"><img src="linkedin-logo.png" class="logo"></a>
+        <a href="https://github.com/eliu-dev" ><img src="github-logo.svg" class="logo"></a>
+        <a href="color-scheme" >
+        <svg style="width:32px; height:32px">
+            <g>
+            <image src="moon.svg" class="logo">
+            </g>
+        </svg>
+        </a>
+    </div>
+    </nav>
     <main>
       <section id="projects">
         <h1>Current Projects</h1>
@@ -59,16 +75,16 @@
         <h1>Snippets</h1>
         <p>Scrapbook of sights and scenes along the journey.</p>
         <div class="img-grid">
-          <img src="/img/sutro.jpg">
-          <img src="/img/stairs.jpg">
-          <img src="/img/bryce.jpg">
-          <img src="/img/tahoe.jpg">
-          <img src="/img/greenway.jpg">
-          <img src="/img/night_onsen.jpg">
-          <img src="/img/yakushima.jpg">
-          <img src="/img/moma.jpg">
-          <img src="/img/olympia.jpg">
-          <img src="/img/yosemite.jpg">
+          <img src="/img/sutro.jpg" loading="lazy">
+          <img src="/img/stairs.jpg" loading="lazy">
+          <img src="/img/bryce.jpg" loading="lazy" >
+          <img src="/img/tahoe.jpg" loading="lazy">
+          <img src="/img/greenway.jpg" loading="lazy">
+          <img src="/img/night_onsen.jpg" loading="lazy">
+          <img src="/img/yakushima.jpg" loading="lazy">
+          <img src="/img/moma.jpg" loading="lazy">
+          <img src="/img/olympia.jpg" loading="lazy">
+          <img src="/img/yosemite.jpg" loading="lazy">
         </div>
       </section>
     </main>

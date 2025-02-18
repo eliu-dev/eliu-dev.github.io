@@ -40,6 +40,8 @@ nav.flexbox {
   left: 0;
   right: 0;
   z-index: 100;
+  height: 4em;
+  padding: 0.5em;
   background-color: #FFFFFF;
   align-items: center;
   flex-wrap: wrap;
@@ -67,10 +69,10 @@ nav .right {
   justify-content: flex-end;
 }
 nav .links {
+  font-weight: 300;
   color: inherit;
   text-decoration: none;
-  font-size: 1.5vh;
-  padding: 5px;
+  font-size: 1em;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -80,15 +82,10 @@ nav .selected-link {
 }
 
 nav .title {
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
-  font-size: 4vh;
-}
-
-/* Hidden element to allow us to start the main body of text below the navbar */
-.navbar-spacer {
-  display: block;
-  margin-bottom: 7em;
+  font-weight: 600;
+  font-size: 3em;
+  align-items: center;
+  justify-content: center;
 }
 
 a > .logo {
@@ -98,18 +95,12 @@ a > .logo {
   padding: 5px;
 }
 
-.grid-articles {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: auto;
-}
-
 main {
-  position: relative;
-  top: max-content;
+  padding-top: 4em;
 }
 
 h1 {
+  font-weight: 500;
   font-size: calc(17px + 0.390625vw);
 }
 
@@ -118,6 +109,7 @@ section h1 {
 }
 
 h2 {
+  font-weight: 400;
   font-size: calc(13px + 0.390625vw);
 }
 
