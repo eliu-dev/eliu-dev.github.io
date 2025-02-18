@@ -11,8 +11,7 @@ class NavBar extends HTMLElement {
             </div>
             <div class="right">
                 <a href="/index.html#projects" class="links">Projects</a>
-                <a href="/index.html#interests" class="links">Interests</a>
-                <a href="/musings.html" class="links">Musings</a>
+                <a href="/index.html#snippets" class="links">Snippets</a>
                 <a href="https://www.linkedin.com/in/eric-liu/"><img src="linkedin-logo.png" class="logo"></a>
                 <a href="https://github.com/eliu-dev" ><img src="github-logo.svg" class="logo"></a>
                 <a href="color-scheme" >
