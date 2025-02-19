@@ -46,7 +46,8 @@ nav.flexbox {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  color: #082241
+  border-bottom: 1px solid;
+  border-color: #e3e3e3;
 }
 
 nav .left {
@@ -67,14 +68,16 @@ nav .right {
   align-items: center;
   flex: 1;
   justify-content: flex-end;
+  margin-inline-end: 10px;
 }
 nav .links {
-  font-weight: 300;
-  color: inherit;
+  font-weight: 400;
+  color: #545454;
   text-decoration: none;
   font-size: 1em;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-variant: all-small-caps;
 }
 
 nav .selected-link {
@@ -82,8 +85,9 @@ nav .selected-link {
 }
 
 nav .title {
-  font-weight: 600;
+  font-weight: 300;
   font-size: 3em;
+  color: #545454;
   align-items: center;
   justify-content: center;
 }
@@ -92,7 +96,7 @@ a > .logo {
   align-self: start;
   background-color: #FFFFFF;
   height: 32px;
-  padding: 5px;
+  margin: 5px;
 }
 
 main {
