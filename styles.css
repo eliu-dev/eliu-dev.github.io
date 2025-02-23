@@ -3,14 +3,14 @@
   scroll-padding: 5em;
   color-scheme: light dark;
   font-family: 'Noto Sans', 'Helvetica', 'Arial', 'San Serif';
-  --background-primary: #f6f6f6;
-  --text-primary: #082241
+  --background-primary: #000000;
+  --text-primary: #f6f6f6;
   
 }
 
-:root[data-theme='dark'] {
-  --background-primary: #082241;
-  --text-primary: #f6f6f6;
+:root[data-theme='light'] {
+  --background-primary: #f6f6f6;
+  --text-primary: #000000;
 }
 
 @font-face {
@@ -31,6 +31,7 @@ body {
   background-color: var(--background-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 1em;
 }
 
 nav.flexbox {
@@ -42,7 +43,7 @@ nav.flexbox {
   z-index: 100;
   height: 4em;
   padding: 0.5em;
-  background-color: #FFFFFF;
+  background-color: #000000;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -62,7 +63,7 @@ nav .left {
 nav .center {
   display: flex;
   align-items: center;
-  flex: 2;
+  flex: 1;
   justify-content: center;
 }
 nav .right {
@@ -75,7 +76,7 @@ nav .right {
 }
 nav .links {
   font-weight: 400;
-  color: #545454;
+  color: #f6f6f6;
   text-decoration: none;
   font-size: 1em;
   margin-left: 10px;
@@ -90,14 +91,13 @@ nav .selected-link {
 nav .title {
   font-weight: 300;
   font-size: 3em;
-  color: #545454;
   align-items: center;
   justify-content: center;
 }
 
 a > .logo {
   align-self: start;
-  background-color: #FFFFFF;
+  background-color: #000000;
   height: 32px;
   margin: 5px;
 }
