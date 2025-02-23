@@ -48,6 +48,8 @@ nav.flexbox {
   justify-content: space-between;
   border-bottom: 1px solid;
   border-color: #e3e3e3;
+  opacity: 80%;
+  backdrop-filter: invert(50%);
 }
 
 nav .left {
@@ -60,7 +62,7 @@ nav .left {
 nav .center {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 2;
   justify-content: center;
 }
 nav .right {
@@ -69,6 +71,7 @@ nav .right {
   flex: 1;
   justify-content: flex-end;
   margin-inline-end: 10px;
+
 }
 nav .links {
   font-weight: 400;
@@ -117,17 +120,36 @@ h2 {
   font-size: calc(13px + 0.390625vw);
 }
 
-div .img-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
+p {
+  max-width: 100ch;
 }
 
-.img-grid img {
+div.img-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+}
+
+.img-flex img {
   border-radius: 15px;
-  height: 300px;
-  width: 300px
+  height: 400px;
+  width: 400px
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate {
+    opacity: 0;
+    scale: 0.4;
+    animation-name: fade-in;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: 50px 25%;
+  }
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
 }
