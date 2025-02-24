@@ -136,6 +136,11 @@ div.img-flex {
   width: 400px
 }
 
+#startupSystemsDesc {
+  margin-bottom: 7em;
+  color: #ffd700;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .animate {
     opacity: 0;
@@ -144,12 +149,45 @@ div.img-flex {
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     animation-timeline: view();
-    animation-range: 50px 25%;
+    animation-range: 50px 25%;    
+    
   }
   @keyframes fade-in {
     to {
       opacity: 1;
       scale: 1;
     }
+  }
+}
+
+p .type-hidden {
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  width: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .type {
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    width: 0;
+    animation-name: typing;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0%
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+      white-space: wrap;
+    }
+    
   }
 }
