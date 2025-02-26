@@ -2,11 +2,19 @@
 
 async function getDescription() {
     const url = 'https://eliu-dev-github-io-895544443438.us-east4.run.app';
-    const res = await fetch(url);
-    if (res.status === 200) {
-        const res_json = await res.json();
-        return res_json?.response?.candidates[0]?.content?.parts;
-    } else {
+    try {
+        const res = await fetch(url);
+        if (res.status === 200) {
+            const res_json = await res.json();
+            return res_json?.response?.candidates[0]?.content?.parts;
+        } else {
+            return [
+                {
+                    text: 'Apologies, there is heavy traffic at this time. Please wait a few seconds and reload the page.'
+                }
+            ]
+        }
+    } catch (error) {
         return [
             {
                 text: 'Apologies, there is heavy traffic at this time. Please wait a few seconds and reload the page.'
