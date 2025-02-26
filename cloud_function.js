@@ -15,6 +15,13 @@ async function getDescription() {
             ]
         }
     } catch (error) {
+        if (error.message === 'Failed to fetch') {
+            return [
+                {
+                    text: 'Apologies, there were issues reaching Gemini\'s API. Please ensure you have javascript enabled and reload the page.'    
+                }
+            ]
+        }
         return [
             {
                 text: 'Apologies, there is heavy traffic at this time. Please wait a few seconds and reload the page.'
@@ -50,9 +57,7 @@ async function addObservers() {
     const textObserver = new IntersectionObserver( function(entries, observer) {
         for (const entry of entries) {
             if (entry.isIntersecting === true) {
-                console.log(`Intersecting on ${entry.target.innerHTML}`)
                 if (entry.target.classList.contains('type') === false) {
-                    console.log(`Adding type on ${entry.target.innerHTML}`)
                     entry.target.classList.remove('type-hidden');
                     entry.target.classList.add('type');
                 }
